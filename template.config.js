@@ -20,7 +20,7 @@ export default {
 		usetemplate: 'main',
 	},
 	git: {
-		repo: ``,
+		repo: `https://github.com/Slav468/vcusDom.git`,
 		branch: `main`,
 	},
 	navpanel: {
