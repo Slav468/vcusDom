@@ -1,0 +1,82 @@
+.links-system {
+	// .links-system__container
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		gap: 32px;
+		width: 100%;
+	}
+
+	// .links-system__head
+
+	&__head {
+		display: flex;
+		flex-wrap: wrap;
+		padding-bottom: 16px;
+		border-bottom: 2px solid #e3e6e1;
+	}
+
+	// .links-system__group
+
+	&__group {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1px;
+	}
+
+	// .links-system__item
+
+	&__item {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 14px;
+		font-weight: 600;
+		line-height: 1.2857;
+		text-align: center;
+		border-radius: 4px;
+
+		&.active {
+			color: #ffffff;
+			background-color: #5b846e;
+		}
+
+		& a {
+			padding: 5px;
+			text-decoration: none;
+			color: inherit;
+			transition: color 0.3s ease 0s;
+		}
+	}
+
+	// .links-system__body
+
+	&__body {
+		display: flex;
+		gap: 32px;
+	}
+
+	// .links-system__title
+
+	&__title {
+		flex: 1 1 50px;
+		font-size: 64px;
+		font-weight: 600;
+		line-height: 1.0625;
+		letter-spacing: -0.01em;
+		color: #111111;
+		text-wrap: pretty;
+	}
+
+	&__list {
+		flex: 1 1 85%;
+		column-gap: 40px;
+		columns: 3;
+
+		& a {
+			break-inside: avoid; /* строка не разрывается между колонками */
+			margin-block-end: 15px;
+		}
+	}
+}

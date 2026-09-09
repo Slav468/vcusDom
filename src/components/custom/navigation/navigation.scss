@@ -1,0 +1,106 @@
+.navigation {
+	position: relative;
+	display: flex;
+	align-items: center;
+	padding-block: 24px;
+
+	.swiper-button-prev,
+	.swiper-button-next {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 24px;
+		height: 24px;
+		padding: 0.4rem;
+		color: var(--main-color, #111111);
+		cursor: pointer;
+		transition:
+			background-color 0.3s ease 0s,
+			color 0.3s ease 0s;
+
+		svg {
+			display: inline-flex;
+			width: 100%;
+			height: 100%;
+			fill: currentColor;
+		}
+
+		&:hover,
+		&:focus-visible {
+		}
+
+		&.swiper-button-prev {
+			left: 0;
+		}
+
+		&.swiper-button-next {
+			right: 0;
+		}
+	}
+
+	// .navigation__slider — рухома строка слайдера (Swiper)
+	&__slider {
+		flex: 1 1 auto;
+		min-width: 0;
+
+		// Слайди по контенту
+		.swiper-slide {
+			flex-shrink: 0;
+			width: auto;
+		}
+
+		// Недоступна кнопка слайдера
+		.swiper-button-lock {
+			display: none;
+		}
+	}
+
+	// .navigation__list
+	&__list {
+		display: flex;
+		align-items: center;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	// .navigation__item
+	&__item {
+		display: flex;
+		align-items: center;
+	}
+
+	// .navigation__link
+	&__link {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 0.8rem;
+		font-weight: 600;
+		line-height: 1.2;
+		white-space: nowrap;
+		text-decoration: none;
+		color: var(--main-color, #111111);
+		transition:
+			color 0.3s ease 0s,
+			background-color 0.3s ease 0s;
+
+		&:hover,
+		&:focus-visible {
+			color: var(--primary-color, #5b846e);
+		}
+
+		// Активний пункт (додається вручную або через JS)
+		&--active {
+			color: var(--primary-color, #5b846e);
+		}
+	}
+
+	// .navigation__text
+	&__text {
+		font-size: 14px;
+		font-weight: 600;
+		line-height: 1.2857;
+		color: var(--main-color, #111111);
+	}
+}

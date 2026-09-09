@@ -1,0 +1,88 @@
+{
+  "statistics": {
+    "sessions": [
+      {
+        "date": "09.09.2026",
+        "start": 1788942388607,
+        "end": 1788943045872
+      },
+      {
+        "date": "09.09.2026",
+        "start": 1788943052841,
+        "end": 1788943179702
+      },
+      {
+        "date": "09.09.2026",
+        "start": 1788943186312,
+        "end": 1788943218384
+      },
+      {
+        "date": "09.09.2026",
+        "start": 1788943224575,
+        "end": 1788943263347
+      },
+      {
+        "date": "09.09.2026",
+        "start": 1788943269905,
+        "end": 1788943499141,
+        "type": "build"
+      },
+      {
+        "date": "09.09.2026",
+        "start": 1788943556214,
+        "end": 1788943733941
+      },
+      {
+        "date": "09.09.2026",
+        "start": 1788943741787,
+        "end": 1788944551235
+      },
+      {
+        "date": "09.09.2026",
+        "start": 1788944558643,
+        "end": 1788956126249
+      },
+      {
+        "date": "09.09.2026",
+        "start": 1788956133438,
+        "end": 1788957263449
+      },
+      {
+        "date": "09.09.2026",
+        "start": 1788957270008,
+        "end": 1788964244285
+      },
+      {
+        "date": "09.09.2026",
+        "start": 1788964307561,
+        "end": 1788964413461
+      }
+    ],
+    "files": [
+      "user.svg",
+      "spritemap.scss",
+      "index.html",
+      "extends.scss",
+      "mixins.scss",
+      "settings.scss",
+      "style.scss",
+      "variables.css",
+      "slider.js",
+      "navigation.scss",
+      "navigation.html",
+      "slider.scss",
+      "header.scss",
+      "breadcrumbs.html",
+      "main.html",
+      "breadcrumbs.scss",
+      "chevronBold.svg",
+      "chevronLeft.svg",
+      "chevronRight.svg",
+      "section.html",
+      "section.scss",
+      "slider.html",
+      "links.html",
+      "links.scss"
+    ]
+  }
+}

@@ -1,0 +1,36 @@
+<header data-fls-header class="header">
+	<div class="header__container">
+
+		<div class="header-top">
+			<include src="@components/custom/logo/logo.html"></include>
+
+
+			<div data-fls-search class="search">
+				<include src="@components/layout/menu/menu.html"
+					locals='{"active":"[[active]]"}'></include>
+
+				<form data-fls-form method="GET" action="#"
+					class="search-form">
+					<input type="text" name="form[text]"
+						placeholder="Поиск по сайту"
+						class="input search-form__input" data-fls-search-input>
+
+					<button type="submit" class="search-form__button">
+						<svg>
+							<use xlink:href="__spritemap#sprite-glass"></use>
+						</svg>
+					</button>
+				</form>
+
+			</div>
+
+			<include src="@components/custom/user/user.html"></include>
+		</div>
+
+		<div class="header-bottom">
+			<include src="@components/custom/navigation/navigation.html">
+			</include>
+		</div>
+
+	</div>
+</header>

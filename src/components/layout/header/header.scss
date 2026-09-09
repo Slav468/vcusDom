@@ -1,0 +1,12 @@
+.header {
+	@include adaptiveValue('padding-block-start', 32, 16);
+
+	background-color: var(--bg-header, #f8f8f6);
+
+	&-top {
+		display: flex;
+		align-items: center;
+
+		@include adaptiveValue('gap', 24, 16);
+	}
+}

@@ -1,0 +1,125 @@
+:root {
+	/* -----------------------------------
+	Шрифти
+	----------------------------------- */
+	--font-family: 'Geologica', sans-serif;
+
+	--font-size: 16px;
+
+	/* -----------------------------------
+	Основні кольори (типографика + акцент)
+	----------------------------------- */
+	--main-color: #111111;
+	--secondary-color: #ffffff;
+	--primary-color: #5b846e;
+
+	/* -----------------------------------
+	Кольори поверхностей
+	----------------------------------- */
+
+	/* Фон секцій, карточек (білий) */
+	--bg-primary: #ffffff;
+
+	/* Світло-сірий тон (топ хедера) */
+	--bg-header: #f8f8f6;
+
+	/* Дополнительный фон (поиск, стрелки, блок подписки) */
+	--bg-secondary: #f1f2ef;
+
+	/* -----------------------------------
+	Кольори тексту
+	----------------------------------- */
+	--text-primary: #111111;
+
+	/* Заголовки H2–H4, Body */
+	--text-secondary: #3d4536;
+
+	/* Подписи, caption, muted */
+	--text-muted: #878f87;
+
+	/* Текст на акцентному кольорі */
+	--text-on-accent: #ffffff;
+
+	/* -----------------------------------
+	Кольори ліній і бордерів
+	----------------------------------- */
+	--line-color: #e3e6e1;
+
+	/* Другорядові бордери (кнопки-иконки) */
+	--line-secondary: #ccd2cb;
+
+	/* -----------------------------------
+	Скруглення
+	----------------------------------- */
+	--radius-sm: 8px; /* кнопки, badge */
+	--radius-md: 12px; /* поле поиска */
+	--radius-lg: 24px; /* карточки брендов */
+	--radius-round: 50%; /* кнопки-стрілки */
+
+	/* -----------------------------------
+	Типографика (Geologica)
+	----------------------------------- */
+
+	/* Display XL — 64px / 68px, SemiBold 600, letter-spacing -0.01em */
+	--font-display-xl: 64px;
+	--line-display-xl: 68px;
+
+	/* H2 — 40px / 44px, SemiBold 600, letter-spacing -0.01em */
+	--font-h2: 40px;
+	--line-h2: 44px;
+
+	/* H3 — 32px / 38px, SemiBold 600 */
+	--font-h3: 32px;
+	--line-h3: 38px;
+
+	/* H4 — 24px / 26px, SemiBold 600 */
+	--font-h4: 24px;
+	--line-h4: 26px;
+
+	/* Body M — 16px / 24px, Regular 400 */
+	--font-body: 16px;
+	--line-body: 24px;
+
+	/* Caption — 12px / 16px, Regular 400 */
+	--font-caption: 12px;
+	--line-caption: 16px;
+
+	/* Badge — 12px / 18px, SemiBold 600, UPPER */
+	--font-badge: 12px;
+	--line-badge: 18px;
+
+	/* Button L — 16px / 20px, SemiBold 600 */
+	--font-button-l: 16px;
+	--line-button-l: 20px;
+
+	/* Button M — 14px / 18px, SemiBold 600 */
+	--font-button-m: 14px;
+	--line-button-m: 18px;
+
+
+	/* Горизонтальний відступ секцій на десктопі */
+	--container-padding: 48px;
+
+	/* Горизонтальний відступ секцій на мобильних (375px) */
+	--container-padding-mobile: 16px;
+
+	/* Вертикальний відступ секцій */
+	--section-padding: 32px;
+
+	/* Базовий крок сітки */
+	--gap: 16px;
+
+
+	/* Карточка бренда в слайдері */
+	--brand-card-width: 215px;
+	--brand-card-height: 150px;
+
+	/* Кнопка-стрілка слайдера */
+	--slider-btn-size: 32px;
+
+	/* Висота кнопки (Button M) */
+	--button-height: 40px;
+
+	/* Максимальна ширина сторінки */
+	--max-width: 1440px;
+}
