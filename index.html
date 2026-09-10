@@ -7,8 +7,8 @@
 		<link rel="preload" href="./assets/fonts/Geologica-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 		<link rel="shortcut icon" href="./assets/img/favicon.ico">
 		<title>ВкусДом Главная</title>
-		<script type="module" crossorigin="" src="./js/index.min.js?v=1788964910935"></script>
-		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1788964910935">
+		<script type="module" crossorigin="" src="./js/index.min.js?v=1789044487799"></script>
+		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1789044487799">
 	</head>
 	<body>
 		<div class="wrapper">
@@ -27,11 +27,16 @@
 							</span>
 						</a>
 						<div data-fls-search="" class="search">
-							<div class="header__menu menu">
+							<div class="header__menu menu" data-fls-dynamic=".header-top, 768">
 								<button type="button" data-fls-menu="" class="button button--primary menu__icon icon-menu">
 									<span class="button__svg">
 										<svg>
 											<use xlink:href="./assets/img/spritemap.svg#sprite-circles"></use>
+										</svg>
+									</span>
+									<span class="button__svg mobile">
+										<svg>
+											<use xlink:href="./assets/img/spritemap.svg#sprite-menu"></use>
 										</svg>
 									</span>
 									<span class="button__text">Каталог</span>
@@ -180,6 +185,24 @@
 								</svg>
 							</button>
 						</nav>
+						<div class="header-bottom__buttons">
+							<button type="button" data-fls-menu="" class="button button--primary">
+								<span class="button__svg">
+									<svg>
+										<use xlink:href="./assets/img/spritemap.svg#sprite-delivery"></use>
+									</svg>
+								</span>
+								<span class="button__text">Доставка</span>
+							</button>
+							<button type="button" data-fls-menu="" class="button button--primary">
+								<span class="button__svg">
+									<svg>
+										<use xlink:href="./assets/img/spritemap.svg#sprite-deliveryMyself"></use>
+									</svg>
+								</span>
+								<span class="button__text">Самовывоз</span>
+							</button>
+						</div>
 					</div>
 				</div>
 			</header>
@@ -617,7 +640,139 @@
 				</div>
 			</main>
 			<footer data-fls-footer="" class="footer">
-				<div class="footer__container"></div>
+				<div class="footer__container">
+					<div class="footer__body">
+						<div class="footer__main">
+							<a href="/" class="logo" data-fls-logo="">
+								<span class="logo__svg">
+									<svg>
+										<use xlink:href="./assets/img/spritemap.svg#sprite-logoImage"></use>
+									</svg>
+								</span>
+								<span class="logo__text">
+									<p>вкусдом</p>
+									<p>гипермаркет</p>
+								</span>
+							</a>
+							<nav data-fls-footer-menu="" class="footer-menu" role="navigation" aria-label="Меню в подвали">
+								<ul class="footer-menu__list">
+									<li class="footer-menu__item">
+										<a href="#" class="footer-menu__link">Каталог</a>
+									</li>
+									<li class="footer-menu__item">
+										<a href="#" class="footer-menu__link">Акции</a>
+									</li>
+									<li class="footer-menu__item">
+										<a href="#" class="footer-menu__link">Мои бонусы</a>
+									</li>
+									<li class="footer-menu__item">
+										<a href="#" class="footer-menu__link">Оплата и доставка</a>
+									</li>
+									<li class="footer-menu__item">
+										<a href="#" class="footer-menu__link">Укажите способ получения</a>
+									</li>
+								</ul>
+								<ul class="footer-menu__list">
+									<li class="footer-menu__item">
+										<a href="#" class="footer-menu__link">Политика обработки Пдн</a>
+									</li>
+									<li class="footer-menu__item">
+										<a href="#" class="footer-menu__link">Горячая линия</a>
+									</li>
+									<li class="footer-menu__item">
+										<a href="#" class="footer-menu__link">Правовая информация</a>
+									</li>
+									<li class="footer-menu__item">
+										<a href="#" class="footer-menu__link">Вакансии</a>
+									</li>
+									<li class="footer-menu__item">
+										<a href="#" class="footer-menu__link">О компании</a>
+									</li>
+								</ul>
+							</nav>
+							<div data-fls-app-links="" class="app-links" role="navigation" aria-label="Мобильные приложения">
+								<a href="#" class="app-links__item">
+									<span class="app-links__icon">
+										<svg>
+											<use xlink:href="./assets/img/spritemap.svg#sprite-apple"></use>
+										</svg>
+									</span>
+									<span class="app-links__text">
+										Загрузите в
+										<br>
+										App Store
+									</span>
+								</a>
+								<a href="#" class="app-links__item">
+									<span class="app-links__icon">
+										<svg>
+											<use xlink:href="./assets/img/spritemap.svg#sprite-googlePlay"></use>
+										</svg>
+									</span>
+									<span class="app-links__text">
+										Доступно в
+										<br>
+										Google Play
+									</span>
+								</a>
+								<a href="#" class="app-links__item">
+									<span class="app-links__icon">
+										<svg>
+											<use xlink:href="./assets/img/spritemap.svg#sprite-ruStore"></use>
+										</svg>
+									</span>
+									<span class="app-links__text">
+										Загрузите в
+										<br>
+										RuStore
+									</span>
+								</a>
+							</div>
+						</div>
+						<div class="footer__aside">
+							<div data-fls-subscribe="" class="subscribe">
+								<a href="#" class="button subscribe__button">
+									<span class="button__text">Будьте в курсе выгодных предложений</span>
+								</a>
+								<p class="subscribe__text">Подпишитесь на рассылку и первыми узнавайте об акциях, скидках и новинках.</p>
+							</div>
+							<div data-fls-contacts="" class="contacts">
+								<div class="contacts__item">
+									<p class="contacts__label">Телефон:</p>
+									<a href="tel:+78712224488" class="contacts__value contacts__value--big">+7 8712 22-44-88</a>
+								</div>
+								<div class="contacts__item">
+									<p class="contacts__label">E-mail:</p>
+									<a href="mailto:info@vkusdom.ru" class="contacts__value contacts__value--big">info@vkusdom.ru</a>
+								</div>
+								<div class="contacts__item">
+									<p class="contacts__label">Адрес:</p>
+									<address class="contacts__value">364024, Чеченская Республика, г. Грозный, проспект А.А. Кадырова, 115</address>
+								</div>
+								<div class="contacts__item">
+									<p class="contacts__label">График работы:</p>
+									<p class="contacts__value">Ежедневно с 08:00 до 23:00</p>
+								</div>
+							</div>
+							<div data-fls-socials="" class="socials">
+								<a href="#" class="socials__link" aria-label="ВКонтакте">
+									<svg>
+										<use xlink:href="./assets/img/spritemap.svg#sprite-vk"></use>
+									</svg>
+								</a>
+								<a href="#" class="socials__link" aria-label="Мессенджер Max">
+									<svg>
+										<use xlink:href="./assets/img/spritemap.svg#sprite-max"></use>
+									</svg>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="footer__bottom">
+						<small class="footer__copy">©2026. Официальный сайт сети «ВкусДом» — доставка продуктов на дом</small>
+						<a href="#" class="footer__privacy">Политика конфиденциальности</a>
+					</div>
+				</div>
 			</footer>
 		</div>
 	</body>
