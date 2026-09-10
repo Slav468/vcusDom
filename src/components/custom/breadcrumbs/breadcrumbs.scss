@@ -23,14 +23,37 @@
 		font-weight: 600;
 		line-height: 1.1;
 		letter-spacing: -0.01em;
-		color: #3d4536;
+		color: var(--text-secondary, #3d4536);
 		background-color: transparent;
 		text-wrap: pretty;
+		border-radius: var(--radius-sm, 8px);
+		transition: color var(--transition-duration, 0.3s)
+			var(--transition-easing, ease);
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--primary-color, #5b846e);
+				background-color: transparent;
+				box-shadow: none;
+			}
+		}
+
+		&:active {
+			transform: translateX(-2px);
+		}
 
 		&__svg {
 			width: 8px;
 			height: 12px;
 			color: var(--primary-color, #5b846e);
+			transition: transform var(--transition-duration-fast, 0.15s)
+				var(--transition-easing, ease);
+		}
+
+		@media (any-hover: hover) {
+			&:hover &__svg {
+				transform: translateX(-3px);
+			}
 		}
 	}
 
@@ -44,7 +67,7 @@
 
 	// .breadcrumbs__item
 	&__item {
-		font-size: 12px;
+		font-size: var(--font-caption, 12px);
 		font-weight: 400;
 		line-height: 1.3333;
 		text-align: center;
@@ -66,10 +89,23 @@
 
 	// .breadcrumbs__link
 	&__link {
+		border-radius: var(--radius-sm, 8px);
 		cursor: pointer;
+		transition: color var(--transition-duration, 0.3s)
+			var(--transition-easing, ease);
 
-		&:hover {
-			text-decoration: underline;
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: underline;
+				color: var(--primary-color, #5b846e);
+				text-underline-offset: 3px;
+			}
+		}
+
+		&:focus-visible {
+			color: var(--primary-color, #5b846e);
+			outline: none;
+			box-shadow: var(--focus-ring, 0 0 0 3px rgba(91, 132, 110, 0.35));
 		}
 	}
 }

@@ -1,4 +1,6 @@
 .user {
+	--icon-button-size: 24px;
+
 	display: flex;
 	align-items: center;
 
@@ -8,20 +10,44 @@
 		gap: 8px;
 
 		& .button {
-			font-size: 16px;
+			font-size: var(--font-button-l, 16px);
 			font-weight: 600;
-			line-height: 1.25;
+			line-height: var(--line-button-l, 20px);
 			text-align: center;
-			color: #ffffff;
+			color: var(--text-on-accent, #ffffff);
 		}
 	}
 
 	&__item {
 		position: relative;
 		display: flex;
-		padding: 7px;
-		border: 1px solid #ccd2cb;
-		border-radius: 8px;
+		border: 1px solid var(--line-secondary, #ccd2cb);
+		border-radius: var(--radius-sm, 8px);
+		transition:
+			border-color var(--transition-duration, 0.3s)
+				var(--transition-easing, ease),
+			background-color var(--transition-duration, 0.3s)
+				var(--transition-easing, ease),
+			transform var(--transition-duration-fast, 0.15s)
+				var(--transition-easing, ease),
+			box-shadow var(--transition-duration, 0.3s) var(--transition-easing, ease);
+
+		@media (any-hover: hover) {
+			&:hover {
+				border-color: var(--primary-color, #5b846e);
+				box-shadow: var(--shadow-sm, 0 2px 8px rgba(17, 17, 17, 0.08));
+				transform: translateY(-2px);
+
+				.user-link__icon {
+					color: var(--primary-color, #5b846e);
+				}
+			}
+		}
+
+		&:focus-within {
+			border-color: var(--primary-color, #5b846e);
+			box-shadow: var(--focus-ring, 0 0 0 3px rgba(91, 132, 110, 0.35));
+		}
 	}
 
 	&__count {
@@ -35,21 +61,30 @@
 		min-width: 14px;
 		min-height: 14px;
 		padding: 4px;
-		font-size: 12px;
+		font-size: var(--font-caption, 12px);
 		font-weight: 600;
 		line-height: 1.5;
 		text-align: right;
 		text-transform: uppercase;
-		color: var(--white, #ffffff);
+		color: var(--text-on-accent, #ffffff);
 		background-color: var(--primary-color, #5b846e);
-		border-radius: 50%;
+		border-radius: var(--radius-round, 50%);
 
 		&.active {
 			display: flex;
+			animation: user-count-pop var(--transition-duration, 0.3s)
+				var(--transition-easing, ease);
 		}
 	}
 
+	// .user__link — посилання-іконка (розмір іконки задає .user-link__icon нижче)
 	&__link {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 7px;
+		color: inherit;
+		border-radius: var(--radius-sm, 8px);
 	}
 
 	&-link {
@@ -57,10 +92,13 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			width: 24px;
-			height: 24px;
-			color: inherit;
-			transition: color 0.3s ease 0s;
+			width: var(--icon-button-size, 24px);
+			height: var(--icon-button-size, 24px);
+			color: var(--line-secondary, #ccd2cb);
+			transition:
+				color var(--transition-duration, 0.3s) var(--transition-easing, ease),
+				transform var(--transition-duration-fast, 0.15s)
+					var(--transition-easing, ease);
 
 			& svg {
 				width: 100%;
@@ -73,11 +111,34 @@
 			font-weight: 400;
 			line-height: 1.2;
 			color: inherit;
-			transition: color 0.3s ease 0s;
+			transition: color var(--transition-duration, 0.3s)
+				var(--transition-easing, ease);
 
 			@media (width <= toEm(768)) {
 				display: none;
 			}
 		}
+	}
+
+	// Підказка-підтвердження при додаванні в кошик (клас додає user.js)
+	&--added {
+		.user__item {
+			background-color: var(--bg-secondary, #f1f2ef);
+			border-color: var(--primary-color, #5b846e);
+		}
+	}
+}
+
+@keyframes user-count-pop {
+	0% {
+		transform: scale(0.4);
+	}
+
+	60% {
+		transform: scale(1.2);
+	}
+
+	100% {
+		transform: scale(1);
 	}
 }

@@ -27,6 +27,45 @@
 			color: var(--text-secondary, #3d4536);
 			text-wrap: pretty;
 		}
+
+		&__link {
+			a {
+				display: inline-flex;
+				align-items: center;
+				padding: 4px 12px;
+				font-size: var(--font-caption, 12px);
+				font-weight: 600;
+				line-height: var(--line-caption, 16px);
+				color: var(--primary-color, #5b846e);
+				background-color: var(--primary-color-soft, #e7efe9);
+				border-radius: var(--radius-sm, 8px);
+				transition:
+					color var(--transition-duration, 0.3s) var(--transition-easing, ease),
+					background-color var(--transition-duration, 0.3s)
+						var(--transition-easing, ease),
+					transform var(--transition-duration-fast, 0.15s)
+						var(--transition-easing, ease);
+
+				@media (any-hover: hover) {
+					&:hover {
+						color: var(--text-on-accent, #ffffff);
+						background-color: var(--primary-color, #5b846e);
+						transform: translateX(2px);
+					}
+				}
+
+				&:active {
+					transform: scale(0.96);
+				}
+
+				&:focus-visible {
+					color: var(--text-on-accent, #ffffff);
+					background-color: var(--primary-color, #5b846e);
+					outline: none;
+					box-shadow: var(--focus-ring, 0 0 0 3px rgba(91, 132, 110, 0.35));
+				}
+			}
+		}
 	}
 
 	&-body {
@@ -34,5 +73,24 @@
 		flex-direction: column;
 		align-items: center;
 		width: 100%;
+
+		/* Підтримка паралаксу при скроллі */
+		@media (prefers-reduced-motion: no-preference) {
+			scroll-driven-animation: scroll-shake 0.3s linear;
+		}
+	}
+
+	@keyframes scroll-shake {
+		0% {
+			transform: translateY(0);
+		}
+
+		50% {
+			transform: translateY(-2px);
+		}
+
+		100% {
+			transform: translateY(0);
+		}
 	}
 }

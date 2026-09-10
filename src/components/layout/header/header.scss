@@ -1,7 +1,20 @@
 .header {
-	@include adaptiveValue('padding-block-start', 32, 16);
-
+	position: sticky;
+	z-index: 50;
+	top: 0;
 	background-color: var(--bg-header, #f8f8f6);
+	transition:
+		box-shadow var(--transition-duration, 0.3s) var(--transition-easing, ease),
+		background-color var(--transition-duration, 0.3s)
+			var(--transition-easing, ease);
+
+	@include adaptiveValue('padding-block', 12, 8);
+
+	// Тінь при прокручуванні сторінки (клас додає header.js)
+	&--scrolled {
+		background-color: var(--bg-primary, #ffffff);
+		box-shadow: var(--shadow-header, 0 8px 24px rgba(17, 17, 17, 0.08));
+	}
 
 	&-top {
 		display: flex;

@@ -4,6 +4,26 @@
 	align-items: center;
 	gap: 10px;
 	max-width: 164px;
+	border-radius: var(--radius-sm, 8px);
+	transition:
+		opacity var(--transition-duration, 0.3s) var(--transition-easing, ease),
+		transform var(--transition-duration-fast, 0.15s)
+			var(--transition-easing, ease);
+
+	@media (any-hover: hover) {
+		&:hover {
+			opacity: 0.85;
+		}
+	}
+
+	&:active {
+		transform: scale(0.97);
+	}
+
+	&:focus-visible {
+		outline: none;
+		box-shadow: var(--focus-ring, 0 0 0 3px rgba(91, 132, 110, 0.35));
+	}
 
 	&__svg {
 		align-self: flex-start;
@@ -24,7 +44,7 @@
 			color: var(--primary-color, #5b846e);
 
 			&:first-child {
-				font-size: 22px;
+				font-size: var(--font-logo-title, 22px);
 				font-weight: 700;
 				line-height: 1;
 				letter-spacing: 1px;
@@ -32,7 +52,7 @@
 			}
 
 			&:last-child {
-				font-size: 12px;
+				font-size: var(--font-caption, 12px);
 				font-weight: 400;
 
 				// text-transform: uppercase;

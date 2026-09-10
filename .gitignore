@@ -5,6 +5,5 @@ zip
 backend
 reload.txt
 build
-package-lock.json
 
 .cline

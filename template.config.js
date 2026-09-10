@@ -21,7 +21,7 @@ export default {
 	},
 	git: {
 		repo: `https://github.com/Slav468/vcusDom.git`,
-		branch: `main`,
+		branch: `gh-pages`,
 	},
 	navpanel: {
 		dev: true,

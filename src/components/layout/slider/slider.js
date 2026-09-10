@@ -105,7 +105,30 @@ function initPopularSliders() {
 				},
 			},
 		});
+
+		// Додаємо клас для анімації при завантаженні
 		popularSlider.push(swiper);
+		animateSlidesOnLoad(slider);
+	});
+}
+
+
+// Анімація слайдів при завантаженні сторінки
+function animateSlidesOnLoad(slider) {
+	const slides = slider.querySelectorAll('.swiper-slide');
+	if (!slides.length) return;
+
+	slides.forEach((slide, index) => {
+		slide.style.opacity = '0';
+		slide.style.transform = 'translateY(20px)';
+		slide.style.transition =
+			'opacity var(--transition-duration, 0.3s) var(--transition-easing, ease), ' +
+			'transform var(--transition-duration, 0.3s) var(--transition-easing, ease)';
+
+		setTimeout(() => {
+			slide.style.opacity = '1';
+			slide.style.transform = 'translateY(0)';
+		}, index * 150);
 	});
 }
 

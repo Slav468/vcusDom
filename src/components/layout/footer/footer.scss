@@ -1,5 +1,127 @@
 .footer {
-	// .footer__container
-	&__container {
+	border-block-start: 1px solid var(--line-color, #e3e6e1);
+
+	@include adaptiveValue('padding-block-start', 60, 32);
+	@include adaptiveValue('padding-block-end', 24, 24);
+
+	// .footer__body
+	&__body {
+		display: grid;
+		grid-template-columns: 604fr 692fr;
+		align-items: start;
+
+		@include adaptiveValue('column-gap', 48, 16);
+	}
+
+	// .footer__main
+	&__main {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+
+		& > .footer-menu {
+			align-self: stretch;
+
+			@include adaptiveValue('margin-block-start', 104, 40);
+		}
+
+		& > .app-links {
+			margin-block-start: 22px;
+		}
+	}
+
+	// .footer__aside
+	&__aside {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+
+		& > .subscribe {
+			align-self: stretch;
+		}
+
+		& > .contacts {
+			@include adaptiveValue('margin-block-start', 102, 40);
+		}
+
+		& > .socials {
+			margin-block-start: 16px;
+		}
+	}
+
+	// Логотип у футері більший за хедерний
+	& .logo {
+		max-width: 200px;
+
+		&__svg {
+			max-width: 44px;
+		}
+
+		&__text {
+			& p {
+				&:first-child {
+					font-size: var(--font-logo-title-footer, 26px);
+				}
+			}
+		}
+	}
+
+	// .footer__bottom
+	&__bottom {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+		gap: 8px 16px;
+		margin-block-start: 56px;
+		padding-block-start: 20px;
+		border-block-start: 1px solid var(--line-color, #e3e6e1);
+	}
+
+	// .footer__copy
+	&__copy {
+		font-size: var(--font-button-m, 14px);
+		line-height: var(--line-button-m, 20px);
+		color: var(--text-muted, #878f87);
+	}
+
+	// .footer__privacy
+	&__privacy {
+		font-size: var(--font-button-m, 14px);
+		font-weight: 600;
+		line-height: var(--line-button-m, 20px);
+		color: var(--primary-color, #5b846e);
+		border-radius: var(--radius-sm, 8px);
+		transition: color var(--transition-duration, 0.3s)
+			var(--transition-easing, ease);
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--text-primary, #111111);
+			}
+		}
+
+		&:focus-visible {
+			outline: none;
+			box-shadow: var(--focus-ring, 0 0 0 3px rgba(91, 132, 110, 0.35));
+		}
+	}
+
+	@media (width <= toEm(768)) {
+		&__body {
+			grid-template-columns: 1fr;
+
+			@include adaptiveValue('row-gap', 40, 24);
+		}
+
+		&__main,
+		&__aside {
+			align-items: flex-start;
+		}
+
+		&__bottom {
+			flex-direction: column;
+			align-items: flex-start;
+		}
 	}
 }

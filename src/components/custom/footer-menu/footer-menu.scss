@@ -1,0 +1,35 @@
+.footer-menu {
+	display: grid;
+	grid-template-columns: 232fr 372fr;
+
+	// .footer-menu__list
+	&__list {
+		display: grid;
+		align-content: start;
+		row-gap: 22px;
+		justify-items: start;
+	}
+
+	// .footer-menu__link
+	&__link {
+		font-size: var(--font-body, 16px);
+		font-weight: 600;
+		line-height: var(--line-body, 24px);
+		color: var(--text-primary, #111111);
+		border-radius: var(--radius-sm, 8px);
+		transition: color var(--transition-duration, 0.3s)
+			var(--transition-easing, ease);
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--primary-color, #5b846e);
+			}
+		}
+
+		&:focus-visible {
+			color: var(--primary-color, #5b846e);
+			outline: none;
+			box-shadow: var(--focus-ring, 0 0 0 3px rgba(91, 132, 110, 0.35));
+		}
+	}
+}

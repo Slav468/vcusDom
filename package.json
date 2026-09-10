@@ -13,6 +13,7 @@
 		"tmp": "vite build -- --tmp --zip",
 		"deploy": "vite build -- --ftp",
 		"git": "vite build -- --git",
+		"gh-pages": "node template_modules/ghpages.js",
 		"stat": "node template_modules/statistics.js -- --stat",
 		"stat-clear": "node template_modules/statistics.js -- --stat-clear",
 		"add": "node template_modules/createcomponent.js",

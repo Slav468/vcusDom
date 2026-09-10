@@ -96,6 +96,12 @@
 	--font-button-m: 14px;
 	--line-button-m: 18px;
 
+	/* Текст логотипа («вкусдом») */
+	--font-logo-title: 22px;
+	--font-logo-title-footer: 26px;
+
+	/* Иконка кнопки-ссылки (user, соцсети, app-links, лупа) */
+	--icon-button-size: 24px;
 
 	/* Горизонтальний відступ секцій на десктопі */
 	--container-padding: 48px;
@@ -109,7 +115,6 @@
 	/* Базовий крок сітки */
 	--gap: 16px;
 
-
 	/* Карточка бренда в слайдері */
 	--brand-card-width: 215px;
 	--brand-card-height: 150px;
@@ -117,9 +122,68 @@
 	/* Кнопка-стрілка слайдера */
 	--slider-btn-size: 32px;
 
+	/* Кнопка-стрілка навігації */
+	--nav-btn-size: 24px;
+
+	/* Карточка бренда в слайдері на мобільних */
+	--brand-card-width-mobile: 115px;
+
+	/* Соцмережі */
+	--social-btn-size: 40px;
+
+	/* Картки/about-секція */
+	--card-padding: 24px;
+
 	/* Висота кнопки (Button M) */
 	--button-height: 40px;
 
 	/* Максимальна ширина сторінки */
 	--max-width: 1440px;
+
+	/* -----------------------------------
+	Переходи та ефекти (інтерактив)
+	----------------------------------- */
+
+	/* Тривалість переходів */
+	--transition-duration: 0.3s;
+	--transition-duration-fast: 0.15s;
+	--transition-duration-slow: 0.6s;
+	--transition-duration-reveal: 0.7s;
+
+	/* Функція згладжування переходів */
+	--transition-easing: ease;
+
+	/* Затемнений акцент (hover/active стан) */
+	--primary-color-dark: #4a6f5b;
+
+	/* Світлий акцент (chips / активні пігулки в хедері) */
+	--primary-color-soft: #e7efe9;
+
+	/* Тіні для lift-ефектів */
+	--shadow-sm: 0 2px 8px rgba(17, 17, 17, 0.08);
+	--shadow-md: 0 8px 24px rgba(17, 17, 17, 0.12);
+	--shadow-header: 0 8px 24px rgba(17, 17, 17, 0.08);
+
+	/* Кільце фокуса (доступність) */
+	--focus-ring: 0 0 0 3px rgba(91, 132, 110, 0.35);
+
+	/* Колір помилки форм */
+	--danger-color: #e5484d;
+
+	/* Радіус секцій-карток на головній */
+	--section-card-radius: 24px;
+
+	/* -----------------------------------
+	Відступи (spacing scale)
+	----------------------------------- */
+	--space-1: 4px;
+	--space-2: 8px;
+	--space-3: 10px;
+	--space-4: 12px;
+	--space-5: 16px;
+	--space-6: 20px;
+	--space-7: 24px;
+	--space-8: 32px;
+	--space-9: 40px;
+	--space-10: 48px;
 }

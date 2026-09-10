@@ -58,18 +58,56 @@
 	overflow: visible;
 
 	& .swiper-slide {
-		max-width: 215px;
-		border: 1px solid var(--bg-secondary, #f1f2ef);
-		border-radius: 24px;
+		overflow: hidden;
+		max-width: var(--brand-card-width, 215px);
+		height: var(--brand-card-height, 150px);
+		border: 1px solid var(--line-color, #e3e6e1);
+		border-radius: var(--radius-lg, 24px);
+		cursor: pointer;
+		transition:
+			border-color var(--transition-duration, 0.3s)
+				var(--transition-easing, ease),
+			box-shadow var(--transition-duration, 0.3s) var(--transition-easing, ease),
+			transform var(--transition-duration, 0.3s) var(--transition-easing, ease),
+			opacity var(--transition-duration, 0.3s) var(--transition-easing, ease);
 
 		& img {
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
+			transition:
+				transform var(--transition-duration-slow, 0.6s)
+					var(--transition-easing, ease),
+				opacity var(--transition-duration, 0.3s) var(--transition-easing, ease);
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				z-index: 2; /* Підняти поверх інших карток при ховері */
+				border-color: var(--primary-color, #5b846e);
+				box-shadow: var(--shadow-md, 0 8px 24px rgba(17, 17, 17, 0.12));
+				transform: translateY(-4px);
+
+				& img {
+					opacity: 0.9;
+					transform: scale(1.04);
+				}
+			}
+		}
+
+		&:active {
+			transform: scale(0.98) translateY(-2px);
+		}
+
+		&:focus-visible {
+			border-color: var(--primary-color, #5b846e);
+			outline: none;
+			box-shadow: var(--focus-ring, 0 0 0 3px rgba(91, 132, 110, 0.35));
 		}
 
 		@media (width <= 768px) {
-			max-width: 115px;
+			max-width: var(--brand-card-width-mobile, 115px);
+			height: auto;
 		}
 	}
 
@@ -83,13 +121,52 @@
 		justify-content: center;
 		align-items: center;
 		gap: 10px;
-		width: 32px;
-		height: 32px;
-		padding: 10px;
-		background: #f1f2ef;
+		width: var(--slider-btn-size, 32px);
+		height: var(--slider-btn-size, 32px);
+		padding: 6px;
+		color: var(--text-secondary, #3d4536);
+		background: var(--bg-secondary, #f1f2ef);
 		border: 4px solid var(--bg-primary, #ffffff);
-		border-radius: 1000px;
+		border-radius: var(--radius-round, 50%);
+		cursor: pointer;
+		transition:
+			color var(--transition-duration, 0.3s) var(--transition-easing, ease),
+			background-color var(--transition-duration, 0.3s)
+				var(--transition-easing, ease),
+			transform var(--transition-duration-fast, 0.15s)
+				var(--transition-easing, ease),
+			opacity var(--transition-duration, 0.3s) var(--transition-easing, ease);
 		transform: translateY(-50%);
+
+		& svg {
+			width: 100%;
+			height: 100%;
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--text-on-accent, #ffffff);
+				background-color: var(--primary-color, #5b846e);
+			}
+		}
+
+		&:active {
+			transform: translateY(-50%) scale(0.9);
+		}
+
+		&:focus-visible {
+			color: var(--text-on-accent, #ffffff);
+			background-color: var(--primary-color, #5b846e);
+			outline: none;
+			box-shadow: var(--focus-ring, 0 0 0 3px rgba(91, 132, 110, 0.35));
+		}
+
+		// Swiper сам ховає кнопки на краях — робимо це плавно
+		&.swiper-button-disabled {
+			visibility: hidden;
+			opacity: 0;
+			pointer-events: none;
+		}
 	}
 
 	& .swiper-button-prev {

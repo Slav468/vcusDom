@@ -1,0 +1,22 @@
+.subscribe {
+	max-width: 690px;
+	padding: 16px 18px 18px;
+	background-color: var(--bg-secondary, #f1f2ef);
+	border-radius: var(--radius-md, 12px);
+
+	// .subscribe__button
+	&__button {
+		width: fit-content;
+		font-size: var(--font-button-m, 14px);
+		font-weight: 600;
+		line-height: var(--line-button-m, 18px);
+	}
+
+	// .subscribe__text
+	&__text {
+		margin-block-start: 10px;
+		font-size: var(--font-caption, 12px);
+		line-height: var(--line-caption, 16px);
+		color: var(--text-muted, #878f87);
+	}
+}

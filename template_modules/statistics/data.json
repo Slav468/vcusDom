@@ -40,22 +40,32 @@
       {
         "date": "09.09.2026",
         "start": 1788944558643,
-        "end": 1788956126249
+        "end": 1788944558643
       },
       {
         "date": "09.09.2026",
-        "start": 1788956133438,
-        "end": 1788957263449
+        "start": 1788954669960,
+        "end": 1788965378714
       },
       {
-        "date": "09.09.2026",
-        "start": 1788957270008,
-        "end": 1788964244285
+        "date": "10.09.2026",
+        "start": 1789025540043,
+        "end": 1789025971410
       },
       {
-        "date": "09.09.2026",
-        "start": 1788964307561,
-        "end": 1788964413461
+        "date": "10.09.2026",
+        "start": 1789027129517,
+        "end": 1789032274827
+      },
+      {
+        "date": "10.09.2026",
+        "start": 1789037696722,
+        "end": 1789038857482
+      },
+      {
+        "date": "10.09.2026",
+        "start": 1789039169705,
+        "end": 1789039169705
       }
     ],
     "files": [
@@ -67,11 +77,22 @@
       "settings.scss",
       "style.scss",
       "variables.css",
+      "_components.html",
+      "header.html",
+      "header.scss",
+      "logo.js",
+      "logo.html",
+      "logo.scss",
+      "menu.html",
+      "menu.scss",
+      "search.html",
+      "search.scss",
+      "user.html",
+      "user.scss",
+      "navigation.html",
       "slider.js",
       "navigation.scss",
-      "navigation.html",
       "slider.scss",
-      "header.scss",
       "breadcrumbs.html",
       "main.html",
       "breadcrumbs.scss",
@@ -82,7 +103,24 @@
       "section.scss",
       "slider.html",
       "links.html",
-      "links.scss"
+      "links.scss",
+      "footer.scss",
+      "subscribe.scss",
+      "footer-menu.scss",
+      "contacts.scss",
+      "socials.html",
+      "input.scss",
+      "links.js",
+      "navigation.js",
+      "search.js",
+      "user.js",
+      "socials.scss",
+      "app-links.scss",
+      "heart.svg",
+      "cart.svg",
+      "header.js",
+      "index.scss",
+      "index.js"
     ]
   }
 }
