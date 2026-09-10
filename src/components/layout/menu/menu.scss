@@ -1,57 +1,73 @@
-// .menu {
-// 	// .menu__icon
-// 	&__icon {
-// 	}
+.menu {
+	// .menu__icon
+	&__icon {
+	}
 
-// 	// .menu__body
-// 	&__body {
-// 		@media (max-width: toEm($mobile)) {
-// 			position: fixed;
-// 			top: 0;
-// 			left: -100%;
-// 			overflow: auto;
-// 			width: 100%;
-// 			height: 100svh;
-// 			padding: 50px 15px 30px;
-// 			transition: left 0.3s;
+	// .menu__body
+	&__body {
+		@media (max-width: toEm($mobile)) {
+			position: fixed;
+			top: 0;
+			left: -100%;
+			overflow: auto;
+			width: 100%;
+			height: 100svh;
+			padding: 50px 15px 30px;
+			transition: left 0.3s;
 
-// 			&::before {
-// 				content: '';
-// 				position: fixed;
-// 				z-index: 2;
-// 				top: 0;
-// 				left: -100%;
-// 				width: 100%;
-// 				height: 70px;
-// 				transition: left 0.3s;
-// 			}
+			&::before {
+				content: '';
+				position: fixed;
+				z-index: 2;
+				top: 0;
+				left: -100%;
+				width: 100%;
+				height: 70px;
+				transition: left 0.3s;
+			}
 
-// 			html[data-fls-menu-open] & {
-// 				left: 0;
+			html[data-fls-menu-open] & {
+				left: 0;
 
-// 				&::before {
-// 					left: 0;
-// 				}
-// 			}
-// 		}
-// 	}
+				&::before {
+					left: 0;
+				}
+			}
+		}
+	}
 
-// 	// .menu__list
-// 	&__list {
-// 		@media (max-width: toEm($mobile)) {
-// 		}
-// 	}
+	// .menu__list
+	&__list {
+		@media (max-width: toEm($mobile)) {
+		}
+	}
 
-// 	// .menu__item
-// 	&__item {
-// 	}
+	// .menu__item
+	&__item {
+	}
 
-// 	// .menu__link
-// 	&__link {
-// 		@media (max-width: toEm($mobile)) {
-// 		}
-// 	}
-// }
+	// .menu__link
+	&__link {
+		@media (max-width: toEm($mobile)) {
+		}
+	}
+
+	@media (width <= toEm(768)) {
+		& .button {
+			&__text {
+				display: none;
+			}
+
+			&__svg {
+				display: none;
+
+				&.mobile {
+					display: flex;
+				}
+			}
+		}
+	}
+}
 
 // Burger Icon
 .icon-menu {

@@ -6,7 +6,8 @@
 		flex-direction: column;
 		gap: var(--space-8, 32px);
 		width: 100%;
-		animation: fadeUp var(--transition-duration-slow, 0.6s) var(--transition-easing, ease) both;
+		animation: fadeUp var(--transition-duration-slow, 0.6s)
+			var(--transition-easing, ease) both;
 	}
 
 	// .links-system__head
@@ -135,6 +136,14 @@
 				outline: none;
 				box-shadow: var(--focus-ring, 0 0 0 3px rgba(91, 132, 110, 0.35));
 			}
+		}
+
+		@media (width <= toEm(991)) {
+			columns: 2;
+		}
+
+		@media (width <= toEm(767)) {
+			columns: 1;
 		}
 	}
 }

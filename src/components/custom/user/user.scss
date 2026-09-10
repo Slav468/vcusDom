@@ -15,6 +15,10 @@
 			line-height: var(--line-button-l, 20px);
 			text-align: center;
 			color: var(--text-on-accent, #ffffff);
+
+			@media (width <= toEm(1150)) {
+				display: none;
+			}
 		}
 	}
 

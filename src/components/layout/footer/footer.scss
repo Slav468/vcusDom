@@ -19,10 +19,10 @@
 		flex-direction: column;
 		align-items: flex-start;
 
+		@include adaptiveValue('gap', 44, 20);
+
 		& > .footer-menu {
 			align-self: stretch;
-
-			@include adaptiveValue('margin-block-start', 104, 40);
 		}
 
 		& > .app-links {

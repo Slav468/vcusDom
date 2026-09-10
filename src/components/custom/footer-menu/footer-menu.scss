@@ -1,6 +1,7 @@
 .footer-menu {
 	display: grid;
-	grid-template-columns: 232fr 372fr;
+	grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+	gap: 22px;
 
 	// .footer-menu__list
 	&__list {

@@ -21,5 +21,37 @@
 		align-items: center;
 
 		@include adaptiveValue('gap', 24, 16);
+
+		@media (width <= toEm(768)) {
+			& .logo__text {
+				display: none;
+			}
+
+			& .user {
+				display: none;
+			}
+		}
+	}
+
+	&-bottom {
+		&__buttons {
+			display: none;
+		}
+
+		@media (width <= toEm(768)) {
+			& .navigation {
+				display: none;
+			}
+
+			&__buttons {
+				display: flex;
+				gap: 8px;
+				padding-block: 8px 0;
+
+				& .button {
+					flex: 1 1 auto;
+				}
+			}
+		}
 	}
 }
