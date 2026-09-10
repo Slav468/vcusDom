@@ -9,7 +9,8 @@
 	border-radius: var(--radius-md, 12px);
 	transition:
 		border-color var(--transition-duration, 0.3s) var(--transition-easing, ease),
-		background-color var(--transition-duration, 0.3s) var(--transition-easing, ease),
+		background-color var(--transition-duration, 0.3s)
+			var(--transition-easing, ease),
 		box-shadow var(--transition-duration, 0.3s) var(--transition-easing, ease);
 
 	&:focus-within {
@@ -21,7 +22,8 @@
 	// Коротка тряска при спробі відправки порожнього запиту (клас додає search.js)
 	&--error {
 		border-color: var(--danger-color, #e5484d);
-		animation: search-shake var(--transition-duration, 0.3s) var(--transition-easing, ease);
+		animation: search-shake var(--transition-duration, 0.3s)
+			var(--transition-easing, ease);
 	}
 
 	&-form {
@@ -43,7 +45,8 @@
 
 			&::placeholder {
 				color: var(--text-muted, #878f87);
-				transition: opacity var(--transition-duration, 0.3s) var(--transition-easing, ease);
+				transition: opacity var(--transition-duration, 0.3s)
+					var(--transition-easing, ease);
 			}
 
 			&:focus::placeholder {
@@ -59,8 +62,11 @@
 			border-radius: var(--radius-sm, 8px);
 			transition:
 				color var(--transition-duration, 0.3s) var(--transition-easing, ease),
-				background-color var(--transition-duration, 0.3s) var(--transition-easing, ease),
-				transform var(--transition-duration-fast, 0.15s) var(--transition-easing, ease);
+				scale var(--transition-duration-fast, 0.15s),
+				var(--transition-easing, ease)
+					// background-color var(--transition-duration, 0.3s) var(--transition-easing, ease),
+				transform var(--transition-duration-fast, 0.15s)
+					var(--transition-easing, ease);
 
 			& svg {
 				aspect-ratio: 1;
@@ -70,7 +76,9 @@
 			@media (any-hover: hover) {
 				&:hover {
 					color: var(--text-on-accent, #ffffff);
-					background-color: var(--primary-color, #5b846e);
+					scale: 1.15;
+
+					// background-color: var(--primary-color, #5b846e);
 				}
 			}
 
